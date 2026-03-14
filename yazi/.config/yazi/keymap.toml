@@ -1,0 +1,17 @@
+[[manager.prepend_keymap]]
+on   = [ "z" ]
+run  = "plugin zoxide"
+desc = "Jump to a directory using zoxide"
+
+[mgr]
+prepend_keymap = [
+  # Goto
+  { on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
+  { on = [ "g", "." ],       run = "cd ~/.config",     desc = "Goto ~/.config" },
+  { on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Goto ~/Downloads" },
+  { on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+
+  # Raspy-specific
+  { on = [ "g", "k" ],       run = "cd ~/dotfiles/niri/.config/niri/cfg/",    desc = "Goto Keymap" },
+  { on = [ "g", "n" ],       run = "cd ~/.config/nvim/lua/config/",desc = "Goto nvim config" },
+]

@@ -1,0 +1,132 @@
+[manager]
+ratio = [ 1, 3, 4 ]
+show_hidden = true
+
+# --------------------
+# OPENERS
+# --------------------
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, desc = "Neovim" }
+]
+
+play = [
+    { run = 'xdg-open "$@"', block = true, desc = "Open Externally" }
+]
+
+# --------------------
+# OPEN RULES
+# Order matters: first match wins
+# --------------------
+
+[open]
+rules = [
+    # Text files
+    { mime = "text/*", use = "edit" },
+
+    # JSON (often detected as application/json)
+    { mime = "application/json", use = "edit" },
+
+    # Common config / dev formats (explicit extension match)
+    { name = "*.toml", use = "edit" },
+    { name = "*.lua",  use = "edit" },
+    { name = "*.yaml", use = "edit" },
+    { name = "*.yml",  use = "edit" },
+    { name = "*.conf", use = "edit" },
+
+    # Media fallback
+    { mime = "video/*", use = "play" },
+    { mime = "audio/*", use = "play" },
+
+    # Final fallback (everything else → nvim)
+    { name = "*", use = "edit" }
+]
+
+# --------------------
+# PREVIEW
+# --------------------
+
+[preview]
+image_cache_size = 10485760
+image_filter = "lanczos3"
+preview_protocol = "kitty"
+
+# --------------------
+# PREVIEW PLUGINS
+# --------------------
+
+[plugin]
+prepend_previewers = [
+    { name = "*.mp4", run = "video" },
+    { name = "*.mkv", run = "video" },
+    { name = "*.avi", run = "video" },
+    { name = "*.mov", run = "video" },
+    { name = "*.pdf", run = "pdf" },
+    { mime = "image/*", run = "image" }
+]
+
+
+
+
+# # sudo pacman -S ffmpegthumbnailer
+#
+# [manager]
+# ratio = [ 1, 3, 4 ]
+# show_hidden = true
+#
+# [opener]
+# edit = [
+#     { run = 'nvim "$@"', block = true, desc = "Neovim" }
+# ]
+# play = [
+#     { run = 'xdg-open "$@"', desc = "Open", block = true }
+# ]
+#
+# [open]
+# rules = [
+#     # 1. Match text files explicitly
+#     { mime = "text/*", use = "edit" },
+#     # 2. Match common config extensions
+#     { name = "*.toml|*.lua|*.conf|*.json", use = "edit" },
+#     # 3. Fallback for everything else
+#     { name = "*", use = "edit" }
+# ]
+# # rules = [
+# #     { name = "*", use = [ "edit", "play" ] }
+# # ]
+# #
+# # [preview]
+# image_cache_size = 10485760
+# image_filter = "lanczos3"
+# # If you use Kitty, Alacritty, or WezTerm, try forcing "kitty"
+# # If you use Foot, use "sixel"
+# preview_protocol = "kitty"
+#
+# [plugin]
+# prepend_previewers = [
+#     { name = "*.mp4|*.mkv|*.avi|*.mov", run = "video" },
+#     { name = "*.pdf", run = "pdf" },
+#     { mime = "image/*", run = "image" }
+# ]
+#
+#
+#
+#
+# # [opener]
+# # play = [
+# #     { run = 'xdg-open "$@"', desc = "Open", block = true }
+# # ]
+# #
+# # [preview]
+# # image_cache_size = 10485760
+# # image_filter = "lanczos3"
+# # # Most Arch users in 2026 need this set explicitly for previews to show
+# # preview_protocol = "kitty" 
+# #
+# # [plugin]
+# # prepend_previewers = [
+# #     { name = "*.mp4|*.mkv|*.avi|*.mov", run = "video" },
+# #     { name = "*.pdf", run = "pdf" },
+# #     { mime = "image/*", run = "image" }
+# # ]

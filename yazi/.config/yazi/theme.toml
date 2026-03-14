@@ -1,0 +1,21 @@
+[flavor]
+use = "catppuccin-mocha"
+
+[icon]
+prepend_exts = [
+	{ name = "js", text = "", fg = "#f1e05a" },
+]
+
+prepend_dirs = [
+	{ name = "Downloads", text = "󰉍", fg = "#89b4fa" },
+]
+
+[filetype]
+rules = [
+	{ name = "*.zip", fg = "#fab387" },
+	{ mime = "image/*", fg = "#a6e3a1" },
+]
+
+[mgr]
+border_symbol = "┃" # Using a thick vertical bar
+border_style  = { fg = "#89b4fa" } # Matching your Catppuccin Blue
