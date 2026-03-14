@@ -10,6 +10,7 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 # ALIAS
-alias update="sudo pacman -Syu"
+# alias update="sudo pacman -Syu"
 alias snapshot="pacman -Qqe > ~/dotfiles/packages/pkglist.txt"
 alias input="sudo libinput debug-events"
+alias update="sudo reflector --country US --age 12 --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyu"
