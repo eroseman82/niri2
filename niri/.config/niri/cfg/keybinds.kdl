@@ -19,7 +19,7 @@ binds {
     ALT+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+S  { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+Comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-
+    Mod+v { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     // ─── Window Spawns ───
     Mod+Shift+N { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
 
