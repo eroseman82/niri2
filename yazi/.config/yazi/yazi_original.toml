@@ -1,0 +1,69 @@
+[manager]
+ratio = [ 1, 3, 4 ]
+show_hidden = true
+
+# --------------------
+# OPENERS
+# --------------------
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, desc = "Neovim" }
+]
+
+play = [
+    { run = 'xdg-open "$@"', orphan = true, desc = "Open Externally" }
+]
+
+# --------------------
+# OPEN RULES
+# Order matters: first match wins
+# --------------------
+[open]
+rules = [
+    # Text → editor
+    { mime = "text/*", use = "edit" },
+    { mime = "application/json", use = "edit" },
+
+    { name = "*.toml", use = "edit" },
+    { name = "*.lua",  use = "edit" },
+    { name = "*.yaml", use = "edit" },
+    { name = "*.yml",  use = "edit" },
+    { name = "*.conf", use = "edit" },
+
+    # Media
+    { mime = "video/*", use = "play" },
+    { mime = "audio/*", use = "play" },
+    { mime = "image/*", use = "play" },
+
+    # Archives
+    { mime = "application/zip", use = "play" },
+    { mime = "application/x-tar", use = "play" },
+
+    # EVERYTHING ELSE
+    { name = "*", use = "play" }
+]
+
+
+# --------------------
+# PREVIEW
+# --------------------
+
+[preview]
+image_cache_size = 10485760
+image_filter = "lanczos3"
+preview_protocol = "kitty"
+
+# --------------------
+# PREVIEW PLUGINS
+# --------------------
+
+[plugin]
+prepend_previewers = [
+    { name = "*.mp4", run = "video" },
+    { name = "*.mkv", run = "video" },
+    { name = "*.avi", run = "video" },
+    { name = "*.mov", run = "video" },
+    { name = "*.pdf", run = "pdf" },
+    { mime = "image/*", run = "image" }
+]

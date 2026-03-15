@@ -8,5 +8,20 @@ use = "yazi-rs/plugins:zoxide"
 rev = "b224ddf"
 hash = "99aa06d3014798d86001c324468d497f"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:video-preview"
+rev = "1962818"
+hash = "99aa06d3014798d86001c324468d497f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:pdf-preview"
+rev = "1962818"
+hash = "99aa06d3014798d86001c324468d497f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:bat"
+rev = "1962818"
+hash = "99aa06d3014798d86001c324468d497f"
+
 [flavor]
 deps = []
