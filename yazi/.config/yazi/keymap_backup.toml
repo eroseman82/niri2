@@ -1,0 +1,115 @@
+# -------------------------
+# ZOXIDE DIRECTORY JUMP
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "z" ]
+run = "plugin zoxide"
+desc = "Jump to directory (zoxide)"
+
+# -------------------------
+# OPEN WITH MENU
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "o" ]
+run = "open --interactive"
+desc = "Open with..."
+
+# -------------------------
+# REVEAL FILE IN GUI
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "O" ]
+run = "reveal"
+desc = "Reveal in system file manager"
+
+# -------------------------
+# COMMON LOCATIONS
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "g", "h" ]
+run = "cd ~"
+desc = "Home"
+
+[[manager.prepend_keymap]]
+on = [ "g", "." ]
+run = "cd ~/.config"
+desc = "~/.config"
+
+[[manager.prepend_keymap]]
+on = [ "g", "d" ]
+run = "cd ~/Downloads"
+desc = "~/Downloads"
+
+[[manager.prepend_keymap]]
+on = [ "g", "<Space>" ]
+run = "cd --interactive"
+desc = "Jump interactively"
+
+# -------------------------
+# YOUR DEV SHORTCUTS
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "g", "k" ]
+run = "cd ~/dotfiles/niri/.config/niri/cfg/"
+desc = "Niri keymap"
+
+[[manager.prepend_keymap]]
+on = [ "g", "n" ]
+run = "cd ~/.config/nvim/lua/config/"
+desc = "Neovim config"
+
+# -------------------------
+# QUICK SEARCH
+# -------------------------
+
+# -------------------------
+# GLOBAL FILE SEARCH
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "f" ]
+run = "plugin fd"
+desc = "Find file (fd)"
+
+# -------------------------
+# COPY PATH
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "y", "p" ]
+run = "copy path"
+desc = "Copy file path"
+
+# -------------------------
+# COPY FILE NAME
+# -------------------------
+
+[[manager.prepend_keymap]]
+on = [ "y", "n" ]
+run = "copy filename"
+desc = "Copy file name"
+
+
+
+# [[manager.prepend_keymap]]
+# on   = [ "z" ]
+# run  = "plugin zoxide"
+# desc = "Jump to a directory using zoxide"
+#
+# [mgr]
+# prepend_keymap = [
+#   # Goto
+#   { on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
+#   { on = [ "g", "." ],       run = "cd ~/.config",     desc = "Goto ~/.config" },
+#   { on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Goto ~/Downloads" },
+#   { on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
+#
+#   # Raspy-specific
+#   { on = [ "g", "k" ],       run = "cd ~/dotfiles/niri/.config/niri/cfg/",    desc = "Goto Keymap" },
+#   { on = [ "g", "n" ],       run = "cd ~/.config/nvim/lua/config/",desc = "Goto nvim config" },
+# ]
