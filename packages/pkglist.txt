@@ -72,6 +72,7 @@ gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
+gtklock
 hdparm
 hwdetect
 hwinfo
@@ -162,6 +163,7 @@ snapper
 sof-firmware
 stow
 sudo
+swaylock
 sysfsutils
 tailscale
 texinfo

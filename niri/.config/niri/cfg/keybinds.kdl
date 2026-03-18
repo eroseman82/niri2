@@ -159,4 +159,5 @@ binds {
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
     Mod+CTRL+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+CTRL+0                         { spawn "swaylock" "-c" "000000"; } // Turn off screens (useful for OLED or privacy)
 }
