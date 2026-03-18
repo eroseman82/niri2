@@ -1,0 +1,6 @@
+# reload is CTRL + SHIFT + ,
+
+background-opacity = 0.8
+background-blur = true
+background-blur-radius = 70
+copy-on-select = clipboard

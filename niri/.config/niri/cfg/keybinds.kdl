@@ -8,7 +8,8 @@ binds {
     // ─── noctalia-shell keybinds ───
     // https://docs.noctalia.dev/getting-started/keybinds/
 
-    Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
+    Mod+Shift+SPACE                     { show-hotkey-overlay; }
+    Mod+O                               repeat=false { toggle-overview; }
 
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
@@ -17,11 +18,11 @@ binds {
     Mod+SPACE                           hotkey-overlay-title="Open Fuzzel" { spawn "fuzzel"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     ALT+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-    Mod+S  { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    Mod+Comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+v { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    Mod+S                               { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
+    Mod+Comma                           { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
+    Mod+v                               { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     // ─── Window Spawns ───
-    Mod+Shift+N { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
+    Mod+CTRL+k                         { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
 
 
     // Please choose your own file manager.
@@ -106,28 +107,28 @@ binds {
     ALT+8                               { focus-workspace 8; }
     ALT+9                               { focus-workspace 9; }
 
-    ALT+SHIFT+1 { move-column-to-workspace 1 focus=false; }
-    ALT+SHIFT+2 { move-column-to-workspace 2 focus=false; }
-    ALT+SHIFT+3 { move-column-to-workspace 3 focus=false; }
-    ALT+SHIFT+4 { move-column-to-workspace 4 focus=false; }
-    ALT+SHIFT+5 { move-column-to-workspace 5 focus=false; }
-    ALT+SHIFT+6 { move-column-to-workspace 6 focus=false; }
-    ALT+SHIFT+7 { move-column-to-workspace 7 focus=false; }
-    ALT+SHIFT+8 { move-column-to-workspace 8 focus=false; }
-    ALT+SHIFT+9 { move-column-to-workspace 9 focus=false; }
+    ALT+SHIFT+1                         { move-column-to-workspace 1 focus=false; }
+    ALT+SHIFT+2                         { move-column-to-workspace 2 focus=false; }
+    ALT+SHIFT+3                         { move-column-to-workspace 3 focus=false; }
+    ALT+SHIFT+4                         { move-column-to-workspace 4 focus=false; }
+    ALT+SHIFT+5                         { move-column-to-workspace 5 focus=false; }
+    ALT+SHIFT+6                         { move-column-to-workspace 6 focus=false; }
+    ALT+SHIFT+7                         { move-column-to-workspace 7 focus=false; }
+    ALT+SHIFT+8                         { move-column-to-workspace 8 focus=false; }
+    ALT+SHIFT+9                         { move-column-to-workspace 9 focus=false; }
     
     // MOVE TO COLUMN AND MOVE WITH IT 
     // ALT+SHIFT+1                         { move-column-to-workspace 1; }
     // ALT+SHIFT+2                         { move-column-to-workspace 2; }
     // ALT+CTRL+3                          { move-column-to-workspace 3; }
     // ALT+CTRL+4                          { move-column-to-workspace 4; }
-    // ALT+SHIFT+5                          { move-column-to-workspace 5; }
+    // ALT+SHIFT+5                         { move-column-to-workspace 5; }
     // ALT+CTRL+6                          { move-column-to-workspace 6; }
     // ALT+CTRL+7                          { move-column-to-workspace 7; }
     // ALT+CTRL+8                          { move-column-to-workspace 8; }
     // ALT+CTRL+9                          { move-column-to-workspace 9; }
-    // MOD+CTRL+J { move-column-to-workspace-down; }
-    // MOD+CTRL+K { move-column-to-workspace-up; }
+    // MOD+CTRL+J                          { move-column-to-workspace-down; }
+    // MOD+CTRL+K                          { move-column-to-workspace-up; }
     //
     // Mod+TAB                             { focus-workspace-previous; }
 
@@ -158,5 +159,4 @@ binds {
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
     Mod+CTRL+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    Mod+O                               repeat=false { toggle-overview; }
 }

@@ -40,6 +40,8 @@ cantarell-fonts
 chafa
 chromium
 chwd
+claude-code
+cliphist
 cpupower
 cryptsetup
 device-mapper
@@ -83,8 +85,10 @@ less
 lib32-nvidia-utils
 lib32-opencl-nvidia
 lib32-vulkan-icd-loader
+lib32-vulkan-radeon
 libdvdcss
 libgsf
+libinput-tools
 libopenraw
 libva-nvidia-driver
 limine
@@ -97,6 +101,7 @@ linux-cachyos-lts-headers
 linux-cachyos-lts-nvidia-open
 linux-cachyos-nvidia-open
 linux-firmware
+localsend
 logrotate
 lsb-release
 lsscsi
@@ -160,6 +165,7 @@ sudo
 sysfsutils
 tailscale
 texinfo
+tmux
 ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
@@ -175,6 +181,7 @@ vim
 vlc
 vlc-plugins-all
 vulkan-icd-loader
+vulkan-radeon
 wget
 which
 wireplumber
