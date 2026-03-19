@@ -22,7 +22,7 @@ binds {
     Mod+Comma                           { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     Mod+v                               { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     // ─── Window Spawns ───
-    Mod+CTRL+k                         { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
+    Mod+CTRL+k                          { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
 
 
     // Please choose your own file manager.
@@ -158,6 +158,6 @@ binds {
 
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
-    Mod+CTRL+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    Mod+CTRL+0                         { spawn "swaylock" "-c" "000000"; } // Turn off screens (useful for OLED or privacy)
+    // Mod+CTRL+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+CTRL+P                         { spawn "swaylock" "-c" "000000"; } // Turn off screens (useful for OLED or privacy)
 }
