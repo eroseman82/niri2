@@ -11,10 +11,13 @@
         }
 
         focus-ring {
-            width 2
-            active-color "#ffc87f"
+            width 1
+            active-color "#b4befe"
             inactive-color "#505050"
         }
 
         struts {}
     }
+
+    // colors 
+    // default #ffc87f 
