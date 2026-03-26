@@ -13,7 +13,13 @@ edit = [
     { run = 'nvim $@', block = true, desc = "Neovim" },
 ]
 open = [
-    { run = 'xdg-open $@', orphan = true, desc = "Open externally" },
+    { run = 'xdg-open "$@"', orphan = true, desc = "Open externally" },
+]
+view_image = [
+    { run = 'chromium "$@"', orphan = true, desc = "Chromium" },
+]
+play_media = [
+    { run = 'vlc "$@"', orphan = true, desc = "VLC" },
 ]
 
 # -------------------------
@@ -54,9 +60,24 @@ rules = [
     # ---------------------
     # MEDIA
     # ---------------------
-    { mime = "image/*",  use = "open" },
-    { mime = "video/*",  use = "open" },
-    { mime = "audio/*",  use = "open" },
+    { name = "*.jpg",  use = ["view_image", "open"] },
+    { name = "*.jpeg", use = ["view_image", "open"] },
+    { name = "*.png",  use = ["view_image", "open"] },
+    { name = "*.gif",  use = ["view_image", "open"] },
+    { name = "*.webp", use = ["view_image", "open"] },
+    { name = "*.avif", use = ["view_image", "open"] },
+    { name = "*.svg",  use = ["view_image", "open"] },
+    { name = "*.mp4",  use = ["play_media", "open"] },
+    { name = "*.mkv",  use = ["play_media", "open"] },
+    { name = "*.avi",  use = ["play_media", "open"] },
+    { name = "*.mov",  use = ["play_media", "open"] },
+    { name = "*.webm", use = ["play_media", "open"] },
+    { name = "*.mp3",  use = ["play_media", "open"] },
+    { name = "*.flac", use = ["play_media", "open"] },
+    { name = "*.ogg",  use = ["play_media", "open"] },
+    { mime = "image/*",  use = ["view_image", "open"] },
+    { mime = "video/*",  use = ["play_media", "open"] },
+    { mime = "audio/*",  use = ["play_media", "open"] },
     # ---------------------
     # DOCUMENTS & ARCHIVES
     # ---------------------
