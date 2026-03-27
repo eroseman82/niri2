@@ -10,16 +10,16 @@ show_hidden = true
 # -------------------------
 [opener]
 edit = [
-    { run = 'nvim $@', block = true, desc = "Neovim" },
+    { run = 'nvim %s', block = true, desc = "Neovim" },
 ]
 open = [
-    { run = 'xdg-open "$@"', orphan = true, desc = "Open externally" },
+    { run = 'xdg-open %s', orphan = true, desc = "Open externally" },
 ]
 view_image = [
-    { run = 'chromium "$@"', orphan = true, desc = "Chromium" },
+    { run = 'chromium %s', orphan = true, desc = "Chromium" },
 ]
 play_media = [
-    { run = 'vlc "$@"', orphan = true, desc = "VLC" },
+    { run = 'vlc %s', orphan = true, desc = "VLC" },
 ]
 
 # -------------------------
@@ -30,6 +30,10 @@ play_media = [
 # -------------------------
 [open]
 rules = [
+    # ---------------------
+    # EMPTY / NEWLY CREATED
+    # ---------------------
+    { mime = "inode/x-empty", use = "edit" },
     # ---------------------
     # TEXT / CODE
     # ---------------------

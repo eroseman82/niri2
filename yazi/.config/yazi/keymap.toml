@@ -11,6 +11,17 @@ desc = "Jump to directory (zoxide)"
 
 # -------------------------
 
+# OPEN - bypass opener system (handles empty/new files too)
+
+# -------------------------
+
+[[mgr.prepend_keymap]]
+on = ["<Enter>"]
+run = ['shell --block -- [ ! -d "%h" ] && nvim "%h" || true', 'enter']
+desc = "Edit file or enter directory"
+
+# -------------------------
+
 # OPEN WITH MENU
 
 # -------------------------
