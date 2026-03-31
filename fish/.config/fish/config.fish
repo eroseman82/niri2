@@ -14,3 +14,5 @@ set -gx VISUAL nvim
 alias snapshot="pacman -Qqe > ~/dotfiles/packages/pkglist.txt"
 alias input="sudo libinput debug-events"
 alias update="sudo reflector --country US --age 12 --protocol https --latest 20 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyu"
+alias service="systemctl --user list-units --type=service"
+alias t="tmux"
