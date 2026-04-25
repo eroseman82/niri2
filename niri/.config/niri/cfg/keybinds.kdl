@@ -21,6 +21,7 @@ binds {
     Mod+S                               { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+Comma                           { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     Mod+v                               { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    Mod+p                               { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:wallcards" "toggle"; }
     // ─── Window Spawns ───
     Mod+CTRL+k                          { spawn "ghostty" "-e" "nvim" "/home/eric/.config/niri/cfg/keybinds.kdl"; }
 

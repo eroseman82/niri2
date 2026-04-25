@@ -74,6 +74,11 @@ run = "cd ~/dotfiles/"
 desc = "dotfiles"
 
 [[mgr.prepend_keymap]]
+on = ["g","s"]
+run = "cd ~/Documents/share/"
+desc = "share"
+
+[[mgr.prepend_keymap]]
 on = ["g","m"]
 run = "cd /mnt/"
 desc = "mount drives"
