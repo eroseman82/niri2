@@ -174,10 +174,6 @@
                     "iconColor": "secondary",
                     "id": "VPN",
                     "textColor": "none"
-                },
-                {
-                    "iconColor": "secondary",
-                    "id": "WallpaperSelector"
                 }
             ],
             "right": [
@@ -201,64 +197,11 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "graphic-clean",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
-                },
-                {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
-                },
-                {
-                    "applyToAllMonitors": false,
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Brightness",
-                    "textColor": "none"
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
-                },
-                {
-                    "defaultSettings": {
-                        "barCycleIntervalSec": 5,
-                        "barDisplayMode": "active",
-                        "barMetric": "prompts",
-                        "providers": {
-                            "claude": {
-                                "credentialsPath": "~/.claude/.credentials.json",
-                                "enabled": false,
-                                "statsPath": "~/.claude/stats-cache.json"
-                            },
-                            "codex": {
-                                "enabled": false
-                            },
-                            "openrouter": {
-                                "apiKey": "",
-                                "enabled": false
-                            },
-                            "zen": {
-                                "apiKey": "",
-                                "enabled": false
-                            }
-                        },
-                        "refreshIntervalSec": 30
-                    },
-                    "id": "plugin:model-usage"
                 },
                 {
                     "defaultSettings": {
@@ -291,6 +234,43 @@
                         "top_bar_radius": 10
                     },
                     "id": "plugin:wallcards"
+                },
+                {
+                    "defaultSettings": {
+                        "barCycleIntervalSec": 5,
+                        "barDisplayMode": "active",
+                        "barMetric": "prompts",
+                        "providers": {
+                            "claude": {
+                                "credentialsPath": "~/.claude/.credentials.json",
+                                "enabled": false,
+                                "statsPath": "~/.claude/stats-cache.json"
+                            },
+                            "codex": {
+                                "enabled": false
+                            },
+                            "openrouter": {
+                                "apiKey": "",
+                                "enabled": false
+                            },
+                            "zen": {
+                                "apiKey": "",
+                                "enabled": false
+                            }
+                        },
+                        "refreshIntervalSec": 30
+                    },
+                    "id": "plugin:model-usage"
+                },
+                {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": true
                 }
             ]
         }

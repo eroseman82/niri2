@@ -24,15 +24,15 @@
         }
     }
 
-window-rule {
-    match app-id="Nautilus"
+    window-rule {
+        match app-id="Nautilus"
 
-    popups {
-        geometry-corner-radius 15
-        opacity 0.5
+        popups {
+            geometry-corner-radius 15
+            opacity 0.5
 
-        background-effect {
-            blur true
+            background-effect {
+                blur true
+            }
         }
     }
-}

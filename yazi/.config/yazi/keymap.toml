@@ -83,6 +83,11 @@ on = ["g","m"]
 run = "cd /mnt/"
 desc = "mount drives"
 
+[[mgr.prepend_keymap]]
+on = ["g","D"]
+run = "cd ~/.dev"
+desc = "dev"
+
 # YOUR DEV SHORTCUTS
 
 # -------------------------
